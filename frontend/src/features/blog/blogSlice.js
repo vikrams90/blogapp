@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { blogService } from "./blogService";
+import { logOut } from "../user/userSlice";
 
 const dark = JSON.parse(localStorage.getItem("dark"));
 
@@ -19,7 +20,7 @@ const initialState = {
   isError: false,
   isDeleted: false,
   errorMsg: "",
-  darkMode: dark?true:false,
+  darkMode: dark ? true : false,
 };
 
 export const blogSlice = createSlice({
@@ -31,13 +32,13 @@ export const blogSlice = createSlice({
       state.edit.blog = action.payload;
     },
     darkModeOn: (state, action) => {
-      state.darkMode = !state.darkMode
+      state.darkMode = !state.darkMode;
       if (state.darkMode) {
-        localStorage.setItem("dark", JSON.stringify({darkMode:true}));
+        localStorage.setItem("dark", JSON.stringify({ darkMode: true }));
       } else {
-        localStorage.removeItem("dark")
+        localStorage.removeItem("dark");
       }
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -82,6 +83,8 @@ export const blogSlice = createSlice({
         state.isSuccess = false;
         state.isLoading = false;
         state.errorMsg = action.error.message;
+        console.log(action.error.message);
+       
       })
       .addCase(deleteBlog.pending, (state) => {
         state.isError = false;
@@ -126,7 +129,6 @@ export const blogSlice = createSlice({
 export const createBlog = createAsyncThunk("BLOG/CREATE", async (formdata) => {
   try {
     return await blogService.postBlog(formdata.data, formdata.token);
-    
   } catch (error) {
     console.log(error);
     console.log(error.response.data.msg);
@@ -141,6 +143,10 @@ export const getAllBlog = createAsyncThunk("BLOG/ALL", async (_, ThunkApi) => {
     const token = ThunkApi.getState().users.user.token;
     return await blogService.getBlog(token);
   } catch (error) {
+    if (error.response.data.msg.includes("user not authorized initiating")) {
+      // localStorage.removeItem("user");
+      ThunkApi.dispatch(logOut())
+    }
     throw error.response.data.msg;
   }
 });
@@ -175,4 +181,4 @@ export const updateBlog = createAsyncThunk(
 );
 
 export default blogSlice.reducer;
-export const { editBlog,darkModeOn } = blogSlice.actions;
+export const { editBlog, darkModeOn } = blogSlice.actions;
