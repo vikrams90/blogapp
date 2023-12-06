@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "https://your-api.domain/$1"
+        "destination": "https://blogapp-l1r9.onrender.com"
       },
       {
         "source": "/(.*)",
