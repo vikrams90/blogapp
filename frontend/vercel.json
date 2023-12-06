@@ -8,11 +8,6 @@
         "source": "/(.*)",
         "destination": "/"
       }
-    ],
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }]
+    ]
 }
   
