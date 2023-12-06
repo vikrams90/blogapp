@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Wellfleet&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Wellfleet', monospace;
+}
+
+.box-shadow-input{
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.box-shadow-container{
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+}
+
+.box-shadow-button{
+  box-shadow: 2.5px 2.5px 4px #0e0e0e, -2.5px -2.5px 4px rgba(18, 18, 18, 0.25), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #121010;
+}
+
+.signup{
+  font-weight: 700;
+}
+
+
+.progress-loader {
+  width: 150px;
+  background: rgba(236, 236, 238, 0.253);
+  height: 10px;
+  border-radius: 7px;
+}
+
+.progress {
+  width: 1px;
+  height: 10px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  transition: 0.5s;
+  animation: loading_44 5s ease-in-out infinite;
+}
+
+@keyframes loading_44 {
+  0% {
+    width: 0%;
+  }
+
+  25%{
+    width: 50%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  75%{
+    width: 50%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+.ql-container { 
+  background: #fefcfc;
+}
+
+.ql-toolbar {
+  display: block;
+  color: rgb(255, 255, 255);
+  background: #dbdbdb;
+}
+
+.ql-editor {
+
+    min-height: 60vh;
+
+}
+
+
+
+/* .card {
+  container background for [#e8e8e8] light mode
+  width: 80%;
+  height: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 10px 20px;
+  background: #e0e0e0;
+  color: #000;
+  box-shadow: 15px 15px 30px #0000003a,
+             -15px -15px 30px #ffffff00;
+
+          
+} */
+
+.card-shadow-dark {
+  /* width: 80%;
+  height: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: #212121;
+  padding: 10px 20px;
+  color: #ffffff; */
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgba(60, 60, 60, 0.288);
+ }
+.card-shadow {
+  /* width: 80%;
+  height: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: #212121;
+  padding: 10px 20px;
+  color: #ffffff; */
+  box-shadow: 15px 15px 30px #0000003a,
+  -15px -15px 30px #ffffff00;
+ }
+
+.desc>p{
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #171717;
+  /* background-color: #ccc; */
+  /* box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3); */
+  box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+  transition: .4s;
+  border-radius: 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 0.1em;
+  border-radius: 0px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /* background-color: #171717; */
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  /* box-shadow: inset 2px 5px 10px rgb(0, 0, 0); */
+}
+
+input:checked + .slider:before {
+  transform: translateX(2.8em);
+}
