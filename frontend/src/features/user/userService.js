@@ -1,6 +1,6 @@
 import axios from "axios";
 const login = async(formdata) => {
-    const response = await axios.post("/api/user/login", formdata);
+    const response = await axios.post("https://blogapp-l1r9.onrender.com/api/user/login", formdata);
     if (response.data) {
         localStorage.setItem("user", JSON.stringify(response.data));
     }
@@ -9,7 +9,7 @@ const login = async(formdata) => {
 }
 
 const register = async (formdata) => {
-    const response = await axios.post("/api/user/register", formdata);
+    const response = await axios.post("https://blogapp-l1r9.onrender.com/api/user/register", formdata);
     if (response.data) {
         localStorage.setItem("user", JSON.stringify(response.data));
     }

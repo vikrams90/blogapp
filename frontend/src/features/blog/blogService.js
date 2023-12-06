@@ -6,7 +6,7 @@ const postBlog = async (formdata, token) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.post("/api/blogs/", formdata, config);
+  const response = await axios.post("https://blogapp-l1r9.onrender.com/api/blogs/", formdata, config);
 
   return await response.data;
 };
@@ -17,7 +17,7 @@ const getBlog = async (token) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get("/api/blogs/", config);
+  const response = await axios.get("https://blogapp-l1r9.onrender.com/api/blogs/", config);
 
   return await response.data;
 };
@@ -28,7 +28,7 @@ const deleteMyBlog = async (token, id) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.delete(`/api/blogs/${id}`, config);
+  const response = await axios.delete(`https://blogapp-l1r9.onrender.com/api/blogs/${id}`, config);
 
   return await response.data;
 };
@@ -39,7 +39,7 @@ const getSingleBlog = async (token,id) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get(`/api/blogs/${id}`, config);
+  const response = await axios.get(`https://blogapp-l1r9.onrender.com/api/blogs/${id}`, config);
 
   return await response.data;
 };
@@ -51,7 +51,7 @@ const updateMyBlog = async (token, data) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.put(`/api/blogs/${id}`, data, config);
+  const response = await axios.put(`https://blogapp-l1r9.onrender.com/api/blogs/${id}`, data, config);
   return await response.data;
 }
 
