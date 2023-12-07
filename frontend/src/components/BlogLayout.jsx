@@ -18,7 +18,7 @@ const BlogLayout = () => {
         <nav className="fixed top-3 left-3 z-[200]">{ open?<FaX/>:<FaBars />}</nav>
         <div className="fixed top-0 z-[100]">{open?<MenuBar/>:<></>}</div>
       </header>
-      <main className='w-full sm:w-10/12 dark:bg-slate-800 sm:dark:bg-inherit text-white sm:text-black h-screen sm:bg-inherit'>
+      <main className='w-full sm:w-10/12 dark:bg-slate-800 sm:dark:bg-inherit dark:text-white text-black sm:text-black h-screen sm:bg-inherit'>
         <Outlet />
       </main>
 
