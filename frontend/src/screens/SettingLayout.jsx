@@ -10,7 +10,7 @@ const SettingLayout = () => {
     await dispatch(darkModeOn());
   };
   return (
-    <div className='p-5'>
+    <div className='sm:p-5 px-8 py-12'>
       <label  class='switch'>
         <input type='checkbox' />
         <span onClick={handleClick} class='slider'></span>

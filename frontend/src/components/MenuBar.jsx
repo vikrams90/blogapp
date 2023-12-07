@@ -25,7 +25,7 @@ const MenuBar = () => {
           <li><NavLink to={ "/blog/all" } >All Blogs</NavLink></li>
         </ul>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 mb-4">
         <NavLink to={"/blog/setting"}>Setting</NavLink>
         <button onClick={handleLogOut}>Logout</button>
       </div>
