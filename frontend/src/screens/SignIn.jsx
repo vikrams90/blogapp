@@ -43,9 +43,9 @@ const SignIn = () => {
 
   return (
     <div className='h-screen w-full bg-primary flex justify-center items-center flex-col'>
-      <div className=' flex w-6/12 border-black flex-col box-shadow-container justify-center gap-3 py-5 px-11 items-center'>
+      <div className=' flex w-10/12 sm:w-6/12 border-black flex-col box-shadow-container justify-center gap-3 py-5 px-11 items-center'>
         <div className='pb-4 flex justify-center items-center flex-col'>
-          <h1 className='text-white text-5xl'>LOGIN</h1>
+          <h1 className='text-white text-3xl sm:text-5xl'>LOGIN</h1>
           {isLoading ? <Loader /> : <></>}
         </div>
         <div className='tost'>
@@ -96,13 +96,13 @@ const SignIn = () => {
             Submit
           </button>
         </form>
-        <div>
-          <p className='text-white'>
+        <div className="text-white text-center">
+          <p className='text-white text-center'>
             Don't have an account?{" "}
-            <NavLink className={"signup text-lg"} to={"/auth/signup"}>
+          </p>
+            <NavLink className={"signup sm:text-lg"} to={"/auth/signup"}>
               Sign Up
             </NavLink>
-          </p>
         </div>
       </div>
     </div>

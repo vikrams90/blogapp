@@ -36,9 +36,9 @@ const ViewBlog = () => {
   }
 
 
-  return <section className="min-h-screen text-black dark:text-white bg-slate-100 dark:bg-zinc-800 w-full flex flex-col items-center py-6 px-28 text-center gap-3"> 
-  <h1 className="font-semibold text-2xl">{data.title}</h1>
-  <div className="flex gap-3 items-center text-xs">
+  return <section className="min-h-screen text-black dark:text-white bg-slate-100 dark:bg-zinc-800 w-full flex flex-col items-center sm:py-6 py-12 px-8 sm:px-28 text-center gap-3"> 
+  <h1 className="font-semibold sm:text-2xl">{data.title}</h1>
+  <div className="flex gap-3 flex-wrap justify-center items-center text-xs">
   <h2 className="bg-yellow-200 dark:bg-slate-600 px-2 py-1">{data.author}</h2>
   <h3 className="bg-yellow-300 dark:bg-stone-700 px-2 py-1">Date : { data.createdAt.split("T")[0]}</h3>
   </div>

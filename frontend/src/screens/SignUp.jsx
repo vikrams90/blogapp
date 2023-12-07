@@ -40,9 +40,9 @@ const SignUp = () => {
 
   return (
     <div className='h-screen w-full bg-primary flex justify-center items-center flex-col'>
-      <div className=' flex w-6/12 border-black flex-col box-shadow-container justify-center gap-3 py-5 px-11 items-center'>
+      <div className=' flex w-10/12 sm:w-6/12 border-black flex-col box-shadow-container justify-center gap-3 py-5 px-11 items-center'>
         <div className='pb-4'>
-          <h1 className='text-white text-5xl'>Register</h1>
+          <h1 className='text-white text-3xl md:text-5xl'>Register</h1>
           {isLoading ? <Loader /> : <></>}
         </div>
         <div className='tost'>

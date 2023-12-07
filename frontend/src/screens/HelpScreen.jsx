@@ -78,8 +78,8 @@ const FAQItem = ({ question, answer }) => {
 const HelpScreen = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 dark:bg-neutral-700 w-full min-h-screen">
-      <div className="w-10/12 my-5 p-8 bg-white dark:bg-stone-800 shadow-lg rounded-lg">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-8">Help/FAQ</h1>
+      <div className="w-10/12 sm:my-5 my-12 p-8 bg-white dark:bg-stone-800 shadow-lg rounded-lg">
+        <h1 className="sm:text-4xl text-xl font-bold text-gray-800 dark:text-white mb-8">Help/FAQ</h1>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />

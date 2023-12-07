@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutScreen = () => {
   return (
-    <div className='bg-gray-100 min-h-screen dark:bg-stone-950 p-8 shadow-md'>
+    <div className='bg-gray-100 min-h-screen dark:bg-stone-950 sm:p-8 py-10 px-8 shadow-md'>
       <h2 className='text-2xl font-semibold mb-4 dark:text-white'>About My Blog</h2>
       <p className='text-gray-600 dark:text-white'>
         Welcome to blogger! Here, you can share your thoughts, <br/> experiences, and

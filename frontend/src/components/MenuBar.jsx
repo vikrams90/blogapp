@@ -4,17 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../features/user/userSlice";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const MenuBar = () => {
+    const { user } = useSelector(state => state.users)
+    const dispatch = useDispatch()
   
-  const { user } = useSelector(state => state.users)
-  const dispatch = useDispatch()
-
-  const handleLogOut = () => {
-    dispatch(logOut())
-  }
-
+    const handleLogOut = () => {
+      dispatch(logOut())
+    }
   return (
-    <div className="dark:bg-black dark:text-white bg-zinc-100 text-black sticky top-0 h-screen flex flex-col items-center text-center justify-between py-8 px">
+    <div className="w-full top-0 left-0 fixed z-[50] dark:bg-black dark:text-white bg-zinc-100 text-black h-screen flex flex-col items-center text-center justify-between py-8 px">
       <div>
         <div className="flex justify-center text-4xl"><FaUser/></div>
         <ul className="flex flex-col gap-6 pt-5 ">
@@ -32,7 +30,7 @@ const Navbar = () => {
         <button onClick={handleLogOut}>Logout</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default MenuBar

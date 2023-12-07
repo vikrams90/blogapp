@@ -98,12 +98,12 @@ const Blog = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen m-0 p-0 flex justify-center dark:text-white dark:bg-slate-800 text-black bg-slate-200">
       <form
         onSubmit={(e) => {
           handleSubmit(e);
         }}
-        className='flex flex-col gap-3 py-3 px-5'
+        className='hidden sm:flex flex-col gap-3 py-3 px-5'
       >
         <input
           className='outline-none'
@@ -120,12 +120,14 @@ const Blog = () => {
           placeholder='fill your heart out'
           value={quillData}
           onChange={handleText}
+          className="hidden sm:block"
         />
         <button>Create Blog</button>
       </form>
+      <h1 className="sm:hidden block my-12 text-center">please open in desktop to add blog</h1>
       {isError ? <Toast message={errorMsg} type={"error"} /> : <></>}
       <div>{isPending ? <Loader /> : <></>}</div>
-    </>
+    </div>
   );
 };
 

@@ -21,7 +21,7 @@ const AllBlog = () => {
 
   return (
     
-    <ul className='w-full min-h-screen scrollbar bg-[#ececec] flex flex-col gap-6 dark:bg-[#212121] px-8 py-6'>
+    <ul className='w-full min-h-screen scrollbar bg-[#ececec] flex flex-col items-center sm:items-start gap-6 dark:bg-[#212121] px-8 py-6'>
      {blog.map(item=><SingleBlog key={item._id} blog={item} />)}
       </ul>
   );

@@ -7,7 +7,7 @@ import image from "../assets/download.jpeg"
 const ContactScreen = () => {
   return (
     <div className="flex flex-col items-center justify-center dark:bg-gray-800 bg-gray-100 min-h-screen">
-      <div className="max-w-md w-full p-8 bg-white dark:bg-gray-950 shadow-lg rounded-lg">
+      <div className=" w-10/12 sm:max-w-md sm:w-full p-8 bg-white dark:bg-gray-950 shadow-lg rounded-lg">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Contact Me</h1>
         <div className="flex items-center mb-4">
           <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
