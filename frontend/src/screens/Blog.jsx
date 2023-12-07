@@ -98,7 +98,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen m-0 p-0 flex justify-center dark:text-white dark:bg-slate-800 text-black bg-slate-200">
+    <div className="">
       <form
         onSubmit={(e) => {
           handleSubmit(e);
