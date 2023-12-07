@@ -122,7 +122,7 @@ const Blog = () => {
           onChange={handleText}
           className="hidden sm:block"
         />
-        <button>Create Blog</button>
+        <button className="bg-white text-black dark:bg-black dark:text-white ">Create Blog</button>
       </form>
       <h1 className="sm:hidden block my-12 text-center">please open in desktop to add blog</h1>
       {isError ? <Toast message={errorMsg} type={"error"} /> : <></>}
