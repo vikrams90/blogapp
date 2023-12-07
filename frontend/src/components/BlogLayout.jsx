@@ -11,6 +11,7 @@ const BlogLayout = () => {
         <Navbar
         ></Navbar>
       </nav>
+  
       <main className='w-10/12 '>
         <Outlet />
       </main>

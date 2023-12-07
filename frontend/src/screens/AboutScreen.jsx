@@ -14,7 +14,10 @@ const AboutScreen = () => {
               This app is created by vikram bhadoria. in this app only authentic user can create, view, edit and remove blogs.
               features
                   
-              <ul className="list-disc">
+             
+        
+      </p>
+      <ul className="list-disc">
               <li>auto logout after 30min inactivity</li>
               <li>create, view and edit blog</li>
               <li>admin panel coming soon</li>
@@ -29,8 +32,6 @@ const AboutScreen = () => {
               <li>user setting with name and email changing option</li>
               <li>light and dark mode</li>
               </ul>
-        
-      </p>
     </div>
   );
 };

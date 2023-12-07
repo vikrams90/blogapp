@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { deleteBlog, editBlog, getAllBlog, updateBlog } from "../features/blog/blogSlice";
+import { getComment } from "../features/comment/commentSlice";
+import CommentLayout from "./CommentLayout";
 
 const ViewBlog = () => {
 
@@ -36,13 +38,22 @@ const ViewBlog = () => {
   }
 
 
-  return <section className="min-h-screen text-black dark:text-white bg-slate-100 dark:bg-zinc-800 w-full flex flex-col items-center py-6 px-28 text-center gap-3"> 
+  return <section className="min-h-screen text-black dark:text-white bg-slate-100 dark:bg-zinc-800 w-full flex flex-col items-center py-6 px-28 text-center gap-3 "> 
   <h1 className="font-semibold text-2xl">{data.title}</h1>
   <div className="flex gap-3 items-center text-xs">
   <h2 className="bg-yellow-200 dark:bg-slate-600 px-2 py-1">{data.author}</h2>
   <h3 className="bg-yellow-300 dark:bg-stone-700 px-2 py-1">Date : { data.createdAt.split("T")[0]}</h3>
   </div>
-  <p className="text-center" dangerouslySetInnerHTML={{ __html: data.article }}></p>
+
+    <div className="blog h-3/5">
+    <p className="text-center" dangerouslySetInnerHTML={{ __html: data.article }}></p>
+    </div>
+    
+    <div className="comment h-2/5">
+      <CommentLayout blogId={ data._id} />
+    </div>
+
+
   <div className="fixed bottom-3 flex gap-3 justify-center bg-inherit">
     <button className="bg-orange-300 dark:bg-cyan-800 px-2 py-1" onClick={handleEdit}>edit blog</button>
     <button className="bg-red-400 dark:bg-red-700 px-2 py-1" onClick={handleDelete}>delete blog</button>

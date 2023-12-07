@@ -44,6 +44,7 @@ app.get("/", (req, res) => {
 // creating route /api/blogs which will be handled in routes file
 app.use("/api/user", require("./routes/userRoutes"));
 app.use("/api/blogs", require("./routes/blogRoutes"));
+app.use("/api/blogs/comments", require("./routes/commentRoutes"));
 
 
 app.use(errorHandler)
