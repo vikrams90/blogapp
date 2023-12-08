@@ -106,7 +106,7 @@ const Blog = () => {
         className='hidden sm:flex flex-col gap-3 py-3 px-5'
       >
         <input
-          className='outline-none'
+          className='outline-none text-black'
           type='text'
           placeholder='Title'
           name='title'
@@ -120,7 +120,7 @@ const Blog = () => {
           placeholder='fill your heart out'
           value={quillData}
           onChange={handleText}
-          className="hidden sm:block"
+          className="hidden sm:block text-black"
         />
         <button className="bg-white text-black dark:bg-black dark:text-white ">Create Blog</button>
       </form>

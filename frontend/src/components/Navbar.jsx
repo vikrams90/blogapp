@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="dark:bg-black dark:text-white bg-zinc-100 text-black sticky top-0 h-screen flex flex-col items-center text-center justify-between py-8 px">
+    <div className="dark:bg-black dark:text-white bg-zinc-100 sticky top-0 text-black min-h-screen flex flex-col items-center text-center justify-between py-8 px">
       <div>
         <div className="flex justify-center text-4xl"><FaUser/></div>
         <ul className="flex flex-col gap-6 pt-5 ">

@@ -10,7 +10,7 @@ const BlogLayout = () => {
   const { darkMode } = useSelector(state => state.blogs)
   return (
     <section data-mode={darkMode?"dark":"light"} className='flex w-screen relative'>
-      <nav className='hidden sm:block sm:w-2/12'>
+      <nav className='hidden min-h-screen dark:bg-black sm:block sm:w-2/12'>
         <Navbar
         ></Navbar>
       </nav>
